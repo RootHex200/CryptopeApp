@@ -1,4 +1,5 @@
 import 'package:cryptope/utils/colors.dart';
+import 'package:cryptope/utils/widget/page_heading.dart';
 import 'package:cryptope/view/TokenPage/component/token_list_item.dart';
 import 'package:flutter/material.dart';
 
@@ -9,23 +10,7 @@ class TokenPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Positioned(
-          child: Container(
-            color: AppColors.primary,
-            child: const Padding(
-              padding: EdgeInsets.only(top: 60),
-              child: Align(
-                  alignment: Alignment.topCenter,
-                  child: Text(
-                    "Tokens",
-                    style: TextStyle(
-                        color: AppColors.secondary,
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold),
-                  )),
-            ),
-          ),
-        ),
+        const PageHeading(title: "Tokens"),
         Positioned(
           child: Container(
             margin: const EdgeInsets.only(top: 100),
@@ -37,24 +22,24 @@ class TokenPage extends StatelessWidget {
                   topLeft: Radius.circular(50),
                   topRight: Radius.circular(50),
                 )),
-            child: Padding(
-              padding: const EdgeInsets.only(top: 10),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                mainAxisSize: MainAxisSize.min,
-                children:  [
-                                    Expanded(
-                    child: ListView.builder(
-                      shrinkWrap: true,
-                      primary: false,
-                      itemCount: 5,
-                      itemBuilder: (context, index) {
-                        return const TokenListItem();
-                      },
-                    ),
-                  )
-                ],
-              ),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                const SizedBox(
+                  height: 20,
+                ),
+                Expanded(
+                  child: ListView.builder(
+                    shrinkWrap: true,
+                    primary: false,
+                    itemCount: 5,
+                    itemBuilder: (context, index) {
+                      return const TokenListItem();
+                    },
+                  ),
+                )
+              ],
             ),
           ),
         ),

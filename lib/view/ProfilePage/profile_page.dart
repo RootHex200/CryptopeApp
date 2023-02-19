@@ -1,4 +1,5 @@
 import 'package:cryptope/utils/colors.dart';
+import 'package:cryptope/utils/widget/page_heading.dart';
 import 'package:flutter/material.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -8,23 +9,7 @@ class ProfilePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        Positioned(
-          child: Container(
-            color: AppColors.primary,
-            child: const Padding(
-              padding: EdgeInsets.only(top: 60),
-              child: Align(
-                  alignment: Alignment.topCenter,
-                  child: Text(
-                    "Profile",
-                    style: TextStyle(
-                        color: AppColors.secondary,
-                        fontSize: 25,
-                        fontWeight: FontWeight.bold),
-                  )),
-            ),
-          ),
-        ),
+        const PageHeading(title: "Profile"),
         Positioned(
           child: Container(
             margin: const EdgeInsets.only(top: 100),

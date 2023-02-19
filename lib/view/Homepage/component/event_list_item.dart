@@ -32,7 +32,7 @@ class EventListItem extends StatelessWidget {
                     Container(
                       height: 120,
                       decoration: BoxDecoration(
-                        color: Colors.red,
+
                         borderRadius: BorderRadius.circular(20),
                         image: const DecorationImage(
                             image: AssetImage('assets/images/crypto.png'),
