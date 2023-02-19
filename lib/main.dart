@@ -1,4 +1,5 @@
-import 'package:cryptope/view/bottom_navigation.dart';
+
+import 'package:cryptope/view/splashscreen/splashscreen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: BottomNavigationPage(),
+      home: SplashScreen(),
     );
   }
 }
